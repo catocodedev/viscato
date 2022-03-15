@@ -1,0 +1,7 @@
+(head);
+    (title)test;
+~head;
+(body);
+    (h1)test;
+    (p)test;
+~body;

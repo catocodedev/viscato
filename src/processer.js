@@ -8,13 +8,11 @@ exports.run = async function(file) {
             data.split(';').forEach(line =>  {
                 line = line.trim();
                 if(line.startsWith('#')) {
-                    console.log(`Line is a comment: ${line}`);
+                    //
                 }
                     else if(line.startsWith('(h1)')) {
-                        console.log(`Line is a heading: ${line}`);
                         html = html + `<h1>${line.substring(4)}</h1>`;
                     }else if(line.startsWith('(title)')) {
-                        console.log(`Line is a title: ${line}`);
                         html = html + `<title>${line.substring(7)}</title>`;
                     }else if(line.startsWith('(p)')) {
                         html = html + `<p>${line.substring(3)}</p>`;
