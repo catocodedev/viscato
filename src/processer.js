@@ -4,7 +4,10 @@ exports.run = async function(file) {
     return new Promise((resolve, reject) => {
         fs.readFile(file, 'utf8', function(err, data) {
             if (err) reject(err);
-            var html = "";
+            var html = '';
+            // add viscato reasources
+            html = html + '<link rel="stylesheet" href="https://raw.githubusercontent.com/catocodedev/viscato/main/reasources/vis.css"> \n'
+            html = html + '<script src="https://raw.githubusercontent.com/catocodedev/viscato/main/reasources/vis.js"></script>\n'
             data.split(';').forEach(line =>  {
                 line = line.trim();
                 if(line.startsWith('#')) {
@@ -45,6 +48,9 @@ exports.run = async function(file) {
                     }
                     else if(line.startsWith('(br)')) {
                         html = html + `<br />`;
+                    }
+                    else if(line.startsWith('(button)')) {
+                        html = html + `<button>${line.substring(8)}</button>`;
                     }
                 html = html + "\n";
               });
