@@ -33,6 +33,21 @@ exports.run = async function(file) {
                     else if(line.startsWith('~head')) {
                         html = html + `</head>`;
                     }
+                    else if(line.startsWith('(ul)')) {
+                        html = html + `<ul>`;
+                    }
+                    else if(line.startsWith('~ul')) {
+                        html = html + `</ul>`;
+                    }
+                    else if(line.startsWith('(li)')) {
+                        html = html + `<li>${line.substring(3)}</li>`;
+                    }
+                    else if(line.startsWith('(a)')) {
+                        html = html + `<a href="${line.substring(3)}.html">${line.substring(3)}</a>`;
+                    }
+                    else if(line.startsWith('(br)')) {
+                        html = html + `<br />`;
+                    }
                 html = html + "\n";
               });
               resolve(html);
