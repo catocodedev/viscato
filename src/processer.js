@@ -1,4 +1,5 @@
 const fs = require('fs');
+const http = require('https');
 
 exports.run = async function(file) {
     return new Promise((resolve, reject) => {
@@ -6,8 +7,16 @@ exports.run = async function(file) {
             if (err) reject(err);
             var html = '';
             // add viscato reasources
-            html = html + '<link rel="stylesheet" href="https://raw.githubusercontent.com/catocodedev/viscato/main/reasources/vis.css"> \n'
-            html = html + '<script src="https://raw.githubusercontent.com/catocodedev/viscato/main/reasources/vis.js"></script>\n'
+            // donwload resources
+            const filew = fs.createWriteStream("rendered/vis.css");
+            const request = http.get("https://raw.githubusercontent.com/catocodedev/viscato/main/reasources/vis.css", function(response) {
+             response.pipe(filew);
+            });
+            const filew2 = fs.createWriteStream("rendered/vis.js");
+            const request2 = http.get("https://raw.githubusercontent.com/catocodedev/viscato/main/reasources/vis.js", function(response) {
+                response.pipe(filew2);
+            });
+            html += '<link rel="stylesheet" href="vis.css">\n<script src="vis.js"></script>\n';
             data.split(';').forEach(line =>  {
                 line = line.trim();
                 if(line.startsWith('#')) {
