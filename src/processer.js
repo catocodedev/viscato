@@ -61,6 +61,61 @@ exports.run = async function(file) {
                     else if(line.startsWith('(button)')) {
                         html = html + `<button>${line.substring(8)}</button>`;
                     }
+                    else if(line.startsWith('(input)')) {
+                        html = html + `<input type="text" />`;
+                    }
+                    else if(line.startsWith('(select)')) {
+                        html = html + `<select>`;
+                    }
+                    else if(line.startsWith('~select')) {
+                        html = html + `</select>`;
+                    }
+                    else if(line.startsWith('(option)')) {
+                        html = html + `<option>${line.substring(8)}</option>`;
+                    }
+                    else if(line.startsWith('(table)')) {
+                        html = html + `<table>`;
+                    }
+                    else if(line.startsWith('~table')) {
+                        html = html + `</table>`;
+                    }
+                    else if(line.startsWith('(tr)')) {
+                        html = html + `<tr>`;
+                    }
+                    else if(line.startsWith('~tr')) {
+                        html = html + `</tr>`;
+                    }
+                    else if(line.startsWith('(td)')) {
+                        html = html + `<td>${line.substring(3)}</td>`;
+                    }
+                    else if(line.startsWith('(h2)')) {
+                        html = html + `<h2>${line.substring(3)}</h2>`;
+                    }
+                    else if(line.startsWith('(h3)')) {
+                        html = html + `<h3>${line.substring(3)}</h3>`;
+                    }
+                    else if(line.startsWith('(h4)')) {
+                        html = html + `<h4>${line.substring(3)}</h4>`;
+                    }
+                    else if(line.startsWith('(h5)')) {
+                        html = html + `<h5>${line.substring(3)}</h5>`;
+                    }
+                    else if(line.startsWith('(h6)')) {
+                        html = html + `<h6>${line.substring(3)}</h6>`;
+                    }
+                    else if(line.startsWith('(hr)')) {
+                        html = html + `<hr />`;
+                    }
+                    else if(line.startsWith('(br)')) {
+                        html = html + `<br />`;
+                    }
+                    else if(line.startsWith('(pre)')) {
+                        html = html + `<pre>`;
+                    }
+                    else if(line.startsWith('~pre')) {
+                        html = html + `</pre>`;
+                    }
+                    
                 html = html + "\n";
               });
               resolve(html);

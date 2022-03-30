@@ -6,4 +6,5 @@
     # header;
     (h1)home;
     (a)test;
+    (p)Example paragraph;
 ~body;
