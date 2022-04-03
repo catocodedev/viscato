@@ -8,7 +8,7 @@ async function main(args) {
         exit(1);
     }
     var neew = await process.run(args[2] + '.catv');
-    // write neww result to file
+    // write new result to file
     if (fs.existsSync('rendered')) {
 
     } else {
@@ -16,6 +16,6 @@ async function main(args) {
     }
     fs.writeFile('./rendered/' + args[2] + '.html', neew, function (err) {
         if (err) throw err;
-        console.log('Rendered!');
+        console.log('Finished rendering!');
     });
 }

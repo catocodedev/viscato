@@ -1,10 +1,8 @@
-(head);
-# title;
+#title;
     (title)This title is for the home page;
-(head);
 (body);
-    # header;
+    #header;
     (h1)Home sweet;
-    (link)Test link;
-    (para)Example paragraph;
+    (underline)Test underline;
+    (paragraph)Example paragraph;
 (body);

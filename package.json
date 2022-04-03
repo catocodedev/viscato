@@ -10,6 +10,8 @@
   "author": "catocodedev",
   "license": "MIT",
   "dependencies": {
+    "moment": "^2.29.1",
+    "normalize.css": "^8.0.1",
     "properties-reader": "^2.2.0"
   }
 }
