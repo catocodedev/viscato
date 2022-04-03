@@ -1,7 +1,8 @@
 (head);
-    (title)test;
-~head;
+    (title)This is a test;
+(head);
+
 (body);
     (h1)test;
-    (a)home;
-~body;
+    (link)home;
+(body);
