@@ -1,10 +1,10 @@
 (head);
 # title;
-    (title)home;
-~head;
+    (title)This title is for the home page;
+(head);
 (body);
     # header;
-    (h1)home;
-    (a)test;
-    (p)Example paragraph;
-~body;
+    (h1)Home sweet;
+    (link)Test link;
+    (para)Example paragraph;
+(body);
