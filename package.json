@@ -1,0 +1,17 @@
+{
+  "name": "viscato",
+  "version": "1.0.0",
+  "description": "A new markdown language for the Web.",
+  "main": "init.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node init.js"
+  },
+  "author": "catocodedev",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.29.1",
+    "normalize.css": "^8.0.1",
+    "properties-reader": "^2.2.0"
+  }
+}

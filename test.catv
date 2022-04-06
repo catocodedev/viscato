@@ -1,7 +1,19 @@
-(head);
-    (title)test;
-~head;
-(body);
-    (h1)test;
-    (a)home;
-~body;
+(head)
+(title)Viscato demo
+(head)
+
+(body)
+    (h1)Viscato demo
+    (link)[https://github.com/catocodedev/viscato]Project URL
+    (newline)
+    (h2)The following is a demo of the Viscato featureset.
+    (italic)This project is a work in progress.
+
+    (paragraph)The basics:
+    (orderedlist)
+        (item)
+            (paragraph)This is an ordered list and is denoted by:
+            (code)(orderedlist)
+        (item)
+    (orderedlist)
+(body)
